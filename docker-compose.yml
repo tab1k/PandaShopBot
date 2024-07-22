@@ -1,0 +1,15 @@
+version: '3.8'
+
+services:
+  bot:
+    build: .
+    restart: unless-stopped
+    environment:
+      - DB_USER=tab1k
+      - DB_PASSWORD=TOBI8585
+      - DB_HOST=host.docker.internal
+      - DB_PORT=5432
+      - DB_NAME=bot_db
+      - API_TOKEN=7054860054:AAFdE_Zsc6pJiqAXjNi_gYMP0x2a1qRKD-I
+    volumes:
+      - .:/app
